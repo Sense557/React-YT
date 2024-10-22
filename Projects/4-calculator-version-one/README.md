@@ -38,7 +38,7 @@ Now run the server using this command  `npm run dev`
 
 the page will look like this
 
-![[![alt text](/Projects/4-calculator-version-one/src/images/1.png)]]
+![alt text](/Projects/4-calculator-version-one/src/images/1.png)
 
 
 Now let's do some **Cleanup** work
