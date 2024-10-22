@@ -138,7 +138,7 @@ do some changes inside `App.module.css` to ensure that the **CSS** module is att
 
 Yes, this is the changes we wanted to see 
 It is working great
-![[Pasted image 20241022220619.png]]
+![alt text](/Projects/4-calculator-version-one/src/images/2.png)
 
 
 Now add some **CSS** to give it a normal `Calculator` look
@@ -196,7 +196,7 @@ export default App;
 
 
 Now Calculator UI looks like this
-![[![alt text](/Projects/4-calculator-version-one/src/images/2.png)]]
+![alt text](/Projects/4-calculator-version-one/src/images/2.png)
 
 
 ### Display.jsx
@@ -370,4 +370,4 @@ export default ButtonsContainer;
 
 
 Now the UI will look like this
-![[![alt text](/Projects/4-calculator-version-one/src/images/3.png)]]
+![alt text](/Projects/4-calculator-version-one/src/images/3.png)
