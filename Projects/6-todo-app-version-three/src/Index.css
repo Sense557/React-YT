@@ -1,0 +1,30 @@
+/* .todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; This will center it vertically */
+} */
+
+.todo-container h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+}
+
+.items-container {
+  text-align: left;
+}
+
+.kg-button {
+  min-width: 80px;
+}
+
+.kg-row {
+  margin: 10px 5px;
+}
