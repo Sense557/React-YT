@@ -1,8 +1,9 @@
+import { RiAddLargeLine } from "react-icons/ri";
 import { useState } from "react";
 
 function AddTodo({ onNewItem }) {
-  const [todoName, setTodoName] = useState();
-  const [dueDate, setDueDate] = useState();
+  const [todoName, setTodoName] = useState("");
+  const [dueDate, setDueDate] = useState("");
 
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
@@ -10,19 +11,22 @@ function AddTodo({ onNewItem }) {
 
   const handleDateChange = (event) => {
     setDueDate(event.target.value);
-
   };
 
-  const handleAddButtonClicked = () => {
-    onNewItem(todoName, dueDate);    
+  const handleAddButtonClicked = (event) => {
+    event.preventDefault();
+
+    onNewItem(todoName, dueDate);
     setTodoName("");
     setDueDate("");
   };
 
   return (
-    <div class="container text-center">
-      <div class="row kg-row">
-        <div class="col-6">
+    <div className="container text-center">
+      <form className="row kg-row" onSubmit={handleAddButtonClicked}>
+        
+
+        <div className="col-6">
           <input
             type="text"
             value={todoName}
@@ -30,21 +34,17 @@ function AddTodo({ onNewItem }) {
             onChange={handleNameChange}
           />
         </div>
-        <div class="col-4">
-          <input type="date"
-          value={dueDate} 
-          onChange={handleDateChange} />
+        <div className="col-4">
+          <input type="date" value={dueDate} onChange={handleDateChange} />
         </div>
-        <div class="col-2">
+        <div className="col-2">
           <button
-            type="button"
-            class="btn btn-success kg-button"
-            onClick={handleAddButtonClicked}
+            className="btn btn-success kg-button"
           >
-            Add
+            <RiAddLargeLine />
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
