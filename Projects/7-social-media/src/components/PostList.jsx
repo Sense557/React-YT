@@ -1,35 +1,33 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Post from "./Post";
 import { PostList as PostListData } from "../store/post-list-store";
 import WelcomeMessage from "./WelcomeMessage";
+import LoadingSpinner from "./LoadingSpinner";
 
 const PostList = () => {
   const { postList, addInitialPosts } = useContext(PostListData);
-  const [dataFetched, setDataFetched] = useState(false);
+  const [fetching, setFetching] = useState(false);
 
-  const handleGetPostsClick = () => {};
-
-  if (!dataFetched) {
+  useEffect(() => {
+    setFetching(true);
     fetch("https://dummyjson.com/posts")
       .then((res) => res.json())
       .then((data) => {
         addInitialPosts(data.posts);
-
-        setDataFetched(true);
-      })
-      .catch((error) => {
-        console.error("Error fetching posts:", error);
+        setFetching(false);
       });
-  };
-
+    return () => {
+      console.log("Cleaning Up useEffect");
+    };
+  }, []);
 
   return (
     <>
-      {postList.length === 0 && <WelcomeMessage />}
+      {fetching && <LoadingSpinner />}
 
-      {postList.map((post) => (
-        <Post key={post.id} post={post} />
-      ))}
+      {!fetching && postList.length === 0 && <WelcomeMessage />}
+
+      {!fetching && postList.map((post) => <Post key={post.id} post={post} />)}
     </>
   );
 };
