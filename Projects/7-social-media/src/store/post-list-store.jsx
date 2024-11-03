@@ -13,10 +13,8 @@ const postListReducer = (currPostList, action) => {
     newPostList = currPostList.filter(
       (post) => post.id !== action.payload.postId
     );
-
-  }else if (action.type === "ADD_INITIAL_POSTS"){
+  } else if (action.type === "ADD_INITIAL_POSTS") {
     newPostList = action.payload.posts;
-  
   } else if (action.type === "ADD_POST") {
     newPostList = [action.payload, ...currPostList];
   }
@@ -38,7 +36,7 @@ const PostListProvider = ({ children }) => {
         tags: tags,
       },
     });
-  };  
+  };
 
   const addInitialPosts = (posts) => {
     dispatchPostList({
