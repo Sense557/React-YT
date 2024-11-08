@@ -1,9 +1,5 @@
 const Header = () => {
-  return (
-    <h1 className="display-4 fw-bold text-body-emphasis">
-      Counter
-    </h1>
-  );
+  return <h1 className="display-4 fw-bold text-body-emphasis">Counter</h1>;
 };
 
 export default Header;
