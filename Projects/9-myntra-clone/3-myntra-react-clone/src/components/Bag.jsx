@@ -1,11 +1,14 @@
+import Header from "./Header";
+import Footer from "./Footer";
+
 const Bag = () => {
   return (
     <>
-      <header />
+      <Header />
       <main>
         <div className="items-container"></div>
       </main>
-      <footer />
+      <Footer />
     </>
   );
 };
