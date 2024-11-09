@@ -28,7 +28,7 @@ const Controls = () => {
     inputElement.current.value = "";
   };
 
-  const handleSubstract = () => {
+  const handleSubtract = () => {
     dispatch(
       counterActions.substract({
         num: inputElement.current.value,
@@ -80,7 +80,7 @@ const Controls = () => {
         <button
           type="button"
           className="btn btn-danger"
-          onClick={handleSubstract}
+          onClick={handleSubtract}
         >
           Substract
         </button>
