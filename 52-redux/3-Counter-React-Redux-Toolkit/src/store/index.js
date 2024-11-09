@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import counterSlice, {counterActions} from "./Counter";
-import privacySlice, {privacyActions} from "./privacy";
+import counterSlice, { counterActions } from "./counter";
+import privacySlice, { privacyActions } from "./privacy";
 
 
 
