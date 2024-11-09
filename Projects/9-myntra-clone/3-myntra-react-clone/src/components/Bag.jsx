@@ -1,4 +1,4 @@
-function App() {
+const Bag = () => {
   return (
     <>
       <header>
@@ -30,12 +30,16 @@ function App() {
         </div>
         <div className="action_bar">
           <div className="action_container">
-            <span className="material-symbols-outlined action_icon">person</span>
+            <span className="material-symbols-outlined action_icon">
+              person
+            </span>
             <span className="action_name">Profile</span>
           </div>
 
           <div className="action_container">
-            <span className="material-symbols-outlined action_icon">favorite</span>
+            <span className="material-symbols-outlined action_icon">
+              favorite
+            </span>
             <span className="action_name">Wishlist</span>
           </div>
 
@@ -91,10 +95,12 @@ function App() {
         </div>
         <hr />
 
-        <div className="copyright">© 2023 www.myntra.com. All rights reserved.</div>
+        <div className="copyright">
+          © 2023 www.myntra.com. All rights reserved.
+        </div>
       </footer>
     </>
   );
-}
+};
 
-export default App;
+export default Bag;
