@@ -1,5 +1,36 @@
-import {createStore} from "redux";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {counterVal: 0},
+  reducers: {
+    increment: (state) => {
+      console.log("state, action");
+    },
+    decrement: (state) => {
+      console.log("state, action");
+    },
+    add: (state) => {
+      console.log("state, action");
+    },
+    substract: (state) => {
+      console.log("state, action");
+    }
+  }
+})
+
+
+
+
+const counterStore = configureStore({reducer: {
+  counter: counterSlice.reducer
+}});
+
+export const counterActions = counterSlice.actions;
+export default counterStore;
+
+
+/*
 const INITIAL_VALUE = {
   counter: 0,
   privacy: false,
@@ -22,8 +53,4 @@ const counterReducer = (store = INITIAL_VALUE, action) => {
 
   return store;
 }
-
-const counterStore = createStore(counterReducer);
-
-
-export default counterStore;
+*/
