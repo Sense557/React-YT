@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { counterActions } from "../store";
+import { counterActions, privacyActions } from "../store";
 
 const Controls = () => {
   const dispatch = useDispatch();
@@ -15,26 +15,26 @@ const Controls = () => {
   };
 
   const handlePrivacyToggle = () => {
-    dispatch({ type: "PRIVACY_TOGGLE" });
+    dispatch(privacyActions.toggle());
   };
 
   const handleAdd = () => {
-    dispatch({
-      type: "ADD",
-      payload: {
+    dispatch(
+      counterActions.add({
         num: inputElement.current.value,
-      },
-    });
+      })
+    );
+
     inputElement.current.value = "";
   };
 
   const handleSubstract = () => {
-    dispatch({
-      type: "SUBSTRACT",
-      payload: {
+    dispatch(
+      counterActions.substract({
         num: inputElement.current.value,
-      },
-    });
+      })
+    );
+
     inputElement.current.value = "";
   };
 
