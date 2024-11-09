@@ -3,17 +3,15 @@ import { useDispatch } from "react-redux";
 import { counterActions } from "../store";
 
 const Controls = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const inputElement = useRef();
 
   const handleIncrement = () => {
-    console.log("increment called");
-    counterActions.increment();
+    dispatch(counterActions.increment());
   };
 
   const handleDecrement = () => {
-    console.log("increment called");
-    counterActions.decrement();
+    dispatch(counterActions.decrement());
   };
 
   const handlePrivacyToggle = () => {
