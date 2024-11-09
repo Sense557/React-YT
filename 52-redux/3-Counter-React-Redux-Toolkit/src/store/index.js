@@ -1,5 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import counterSlice, { counterActions } from "./counter";
+import counterSlice, { counterActions } from "./Counter";
 import privacySlice, { privacyActions } from "./privacy";
 
 
@@ -9,6 +9,5 @@ const counterStore = configureStore({reducer: {
   privacy: privacySlice.reducer
 }});
 
-export { counterActions, privacyActions };
 export default counterStore;
 
