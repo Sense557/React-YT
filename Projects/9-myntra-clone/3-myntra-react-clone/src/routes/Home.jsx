@@ -1,4 +1,4 @@
-import HomeItem from "../components/HomeItem"
+import HomeItem from "../components/HomeItem";
 
 const Home = () => {
   const item = {
@@ -17,11 +17,12 @@ const Home = () => {
     },
   };
 
-  return;
-  <main>
-    <div className="items-container"></div>
-    <HomeItem item={item} />
-  </main>;
+  return (
+    <main>
+      <div className="items-container"></div>
+      <HomeItem item={item} />
+    </main>
+  );
 };
 
 export default Home;
