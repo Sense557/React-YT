@@ -22,9 +22,9 @@ function App() {
   return (
     <>
       <Header />
-      <HomeItem item={item} />
       <main>
         <div className="items-container"></div>
+        <HomeItem item={item} />
       </main>
       <Footer />
     </>
