@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
+import App from "./routes/App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Bag from "./components/Bag.jsx";
+import Bag from "./routes/Bag.jsx";
+import Home from "./routes/Home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <App /> /*, loader: postLoader*/ },
+      { path: "/", element: <Home /> /*, loader: postLoader*/ },
       { path: "bag", element: <Bag /> /*, action: createPostAction*/ },
     ],
   },
