@@ -12,7 +12,7 @@ const BagItem = ({ item }) => {
             <span className="current-price">Rs {item.current_price}</span>
             <span className="original-price">Rs {item.original_price}</span>
             <span className="discount-percentage">
-              (${item.discount_percentage}% OFF)
+              ({item.discount_percentage}% OFF)
             </span>
           </div>
           <div className="return-period">
@@ -27,7 +27,10 @@ const BagItem = ({ item }) => {
           </div>
         </div>
 
-        <div className="remove-from-cart" onclick="removeFromBag(${item.id})">
+        <div
+          className="remove-from-cart"
+          onClick={() => console.log("Item removed from cart")}
+        >
           X
         </div>
       </div>

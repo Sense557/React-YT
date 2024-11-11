@@ -15,7 +15,7 @@ const HomeItem = ({ item }) => {
         </div>
         <button
           className="btn-add-bag"
-          onclick={() => console.log("Item was clicked")}
+          onClick={() => console.log("Item was clicked")}
         >
           Add to Bag
         </button>
