@@ -16,7 +16,7 @@ const FetchItems = () => {
     fetch("http://localhost:8080/items", { signal })
       .then((res) => res.json())
       .then((items) => {
-        dispatch(itemsActions.addInitialItems(items));
+        dispatch(itemsActions.addInitialItems(items[0]));
       });
     return () => {
       controller.abort();

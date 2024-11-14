@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const items = useSelector((store) => store.items);
-  console.log(items);
+  console.log("Got Items", items);
 
   return (
     <main>
@@ -11,7 +11,6 @@ const Home = () => {
         {items.map((item) => (
           <HomeItem key={item.id} item={item} />
         ))}
-        
       </div>
     </main>
   );
