@@ -19,3 +19,4 @@ const bagSlice = createSlice({
 
 export const bagActions = bagSlice.actions;
 export default bagSlice;
+
