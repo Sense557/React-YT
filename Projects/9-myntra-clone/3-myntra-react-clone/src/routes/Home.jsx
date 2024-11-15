@@ -1,18 +1,22 @@
-import HomeItem from "../components/HomeItem";
 import { useSelector } from "react-redux";
+import HomeItem from "../components/HomeItem";
 
 const Home = () => {
   const items = useSelector((store) => store.items);
-  console.log("Got Items", items);
+  const fetchStatus = useSelector((store) => store.fetchStatus); // Access fetchStatus from the store
 
   return (
-    <main>
-      <div className="items-container">
-        {items.map((item) => (
-          <HomeItem key={item.id} item={item} />
-        ))}
-      </div>
-    </main>
+    <>
+      {fetchStatus.currentlyFetching ? (
+        <p>Loading...</p> // Show loading while data is being fetched
+      ) : (
+        <div className="items-container">
+          {items.map((item) => (
+            <HomeItem key={item.id} item={item} />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 

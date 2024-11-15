@@ -5,11 +5,11 @@ const itemsSlice = createSlice({
   initialState: [],
   reducers: {
     addInitialItems: (state, action) => {
-      return action.payload;
+      // Mutate the draft state directly
+      state.splice(0, state.length, ...action.payload);  // Clear current state and add new items
     },
   },
 });
 
 export const itemsActions = itemsSlice.actions;
-
 export default itemsSlice;
